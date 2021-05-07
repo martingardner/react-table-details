@@ -1,8 +1,6 @@
 import React from 'react';
 
 const Modal = (props) => {
-
-    console.log('props', props);
     /* list of props from address that we want to loop through and show if there is data */
     const addressList = ['city', 'street', 'suite', 'zipcode']
     const companyList = ['bs', 'catchPhrase', 'name']
