@@ -1,4 +1,5 @@
 import React from 'react';
+import ModalSectionData from './ModalSectionData';
 
 const Modal = (props) => {
     /* list of props from address that we want to loop through and show if there is data */
@@ -6,8 +7,8 @@ const Modal = (props) => {
     const companyList = ['bs', 'catchPhrase', 'name']
 
     /* generate mapped section data for address and company */
-    const addressSection = addressList.map( (a) => ModalSectionData(props.data.address[a], a) );
-    const companySection = companyList.map( (c) => ModalSectionData(props.data.company[c], c) );
+    const addressSection = addressList.map( (a) => <ModalSectionData data={props.data.address[a]} name={a}  /> );
+    const companySection = companyList.map( (c) => <ModalSectionData data={props.data.company[c]} name={c} /> );
  
     return (
         <>
@@ -25,12 +26,3 @@ const Modal = (props) => {
 }
 
 export default Modal
-
-const ModalSectionData = (data, name) => {
-    return (
-        <section key={name}>
-            <div>{name}</div>
-            <div>{data}</div>
-        </section>
-    )
-}
