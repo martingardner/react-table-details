@@ -4,3 +4,7 @@
 - cd to details-table
 - `npm install`
 - `npm run start`
+
+## testing
+- jest
+- react testing library
