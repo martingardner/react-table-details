@@ -7,8 +7,8 @@ const Modal = (props) => {
     const companyList = ['bs', 'catchPhrase', 'name']
 
     /* generate mapped section data for address and company */
-    const addressSection = addressList.map( (a) => <ModalSectionData data={props.data.address[a]} name={a}  /> );
-    const companySection = companyList.map( (c) => <ModalSectionData data={props.data.company[c]} name={c} /> );
+    const addressSection = addressList.map( (a) => <ModalSectionData key={a} data={props.data.address[a]} name={a}  /> );
+    const companySection = companyList.map( (c) => <ModalSectionData key={c} data={props.data.company[c]} name={c} /> );
  
     return (
         <>
