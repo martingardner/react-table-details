@@ -33,6 +33,7 @@ describe('Components - Modal', ()=> {
         )
     });
 
+
     test('Modal renders with "Leanne Graham Details" showing', ()=> {
         const headingText = screen.getByRole('heading', { level: 2});
         expect(headingText).toHaveTextContent('Leanne Graham Details');
@@ -42,5 +43,6 @@ describe('Components - Modal', ()=> {
         const closeBtn = screen.getByRole('button');
         expect(closeBtn).toHaveTextContent('Close');
     });
+
     
 });
